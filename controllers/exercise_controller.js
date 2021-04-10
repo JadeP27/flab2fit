@@ -6,7 +6,9 @@ getWorkouts:  (req, res) => {
       .then(dbWorkout => {
       dbWorkout.forEach(workout => {
         let total = 0;
-
+        workout.exercises.forEach(exercise =>
+          total += exercise.duration
+          (workout.totalDuration = total))
       })
       res.json(dbWorkout);
     })
@@ -25,7 +27,7 @@ createWorkout: (req, res) => {
 },
 updateWorkout: (req, res) => {
     console.log(req.body)
-    db.Workouts.findAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body }} , { new: true })
+    db.Workouts.findOneAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body }} , { new: true })
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
