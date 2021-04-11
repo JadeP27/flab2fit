@@ -31,5 +31,7 @@ This application utilizes and requires the following technologies:
 - Open your web browser to the localhost: 8080
 
 ### Screenshot
+<img width="1438" alt="Homepage_Screenshot" src="https://user-images.githubusercontent.com/71804986/114294270-4628b200-9a52-11eb-9272-5c09a4608dfd.png">
 
 ### Deployed Link
+![Deployed Link](https://immense-plains-84255.herokuapp.com/exercise?id=undefined?raw=true "Deployed App Link")
